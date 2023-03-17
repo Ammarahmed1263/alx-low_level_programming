@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - prints alphabet
+ * main - alphabets reversed
  *
  * Return: 0 always
  */
@@ -8,16 +8,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 'a'; i <= 'z'; i++)
+	for (i = 'z'; i >= 'a'; i--)
 	{
 		putchar(i);
 	}
-
-	for (i = 'A'; i <= 'Z'; i++)
-	{
-		putchar(i);
-	}
-
 	putchar('\n');
 
 	return (0);
