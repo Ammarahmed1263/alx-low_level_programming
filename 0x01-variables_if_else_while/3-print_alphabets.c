@@ -8,13 +8,9 @@ int main(void)
 {
 	int i;
 
-	for (i = 'a'; i <= 'Z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
 		putchar(i);
-
-		if (i == 'z')
-			i -= 39;
-
 	}
 
 	for (i = 'A'; i < 'Z'; i++)
