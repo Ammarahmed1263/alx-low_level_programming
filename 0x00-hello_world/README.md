@@ -1,1 +1,3 @@
-running file
+preproccess file
+compile without link
+assemble
