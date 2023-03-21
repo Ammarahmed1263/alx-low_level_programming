@@ -4,15 +4,16 @@
  *
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i = 'a', j;
 
 	for (j = 0; j < 10; j++)
 	{
-		while (i < 'z')
+		while (i <= 'z')
 		{
 			_putchar(i);
+			i++;
 		}
 		_putchar('\n');
 	}
