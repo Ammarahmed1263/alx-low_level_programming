@@ -15,8 +15,8 @@ int _islower(int c)
 		if (i == c)
 			counter++;
 	}
-	
+
 	if (counter != 0)
 		return (1);
-	return 0;
+	return (0);
 }

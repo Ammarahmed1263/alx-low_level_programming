@@ -8,12 +8,15 @@
 
 int _isalpha(int c)
 {
-	int i, j;
+	int i, counter = 0;
 
 	for (i = 'a'; i <= 'z'; j++)
 	{
 		if (i == c || i - 32 == c)
-			return (1);
+			counter++;
 	}
+	
+	if (counter != 0)
+		return (1);
 	return (0);
 }
