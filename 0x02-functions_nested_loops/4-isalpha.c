@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- * _islower - check if alpha
+ * _isalpha - check if alpha
  *@c: alpha to be checked
  *
- * Return: 1 if lower else return 0
+ * Return: 1 if alpha else return 0
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 	int i, j;
 
 	for (i = 'a'; i <= 'z'; j++)
 	{
-		if (i == c)
+		if (i == c || i - '32' == c)
 			return (1);
 	}
 	return (0);
