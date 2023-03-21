@@ -10,7 +10,7 @@ int _isalpha(int c)
 {
 	int i, counter = 0;
 
-	for (i = 'a'; i <= 'z'; j++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
 		if (i == c || i - 32 == c)
 			counter++;
