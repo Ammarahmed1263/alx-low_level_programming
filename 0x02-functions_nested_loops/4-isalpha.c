@@ -15,7 +15,7 @@ int _isalpha(int c)
 		if (i == c || i - 32 == c)
 			counter++;
 	}
-	
+
 	if (counter != 0)
 		return (1);
 	return (0);
