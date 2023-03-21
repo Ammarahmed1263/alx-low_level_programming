@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * main - print alpha
+ * print_alphabet - print alpha
  *
- * Return: 0 always
+ * Description: prints all alphabetical
+ * ascendingly
  */
 void print_alphabet(void)
 {
@@ -13,6 +14,4 @@ void print_alphabet(void)
 		_putchar(i);
 	}
 	_putchar('\n');
-
-	return (0);
 }
