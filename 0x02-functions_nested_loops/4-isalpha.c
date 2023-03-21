@@ -12,7 +12,7 @@ int _isalpha(int c)
 
 	for (i = 'a'; i <= 'z'; j++)
 	{
-		if (i == c || i - '32' == c)
+		if (i == c || i - 32 == c)
 			return (1);
 	}
 	return (0);
