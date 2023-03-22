@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - count to 98
- *
+ * @n: start of counting`
  */
 
 void print_to_98(int n)
