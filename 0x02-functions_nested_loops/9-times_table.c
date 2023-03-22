@@ -10,7 +10,7 @@ void times_table(void)
 	for (i = 0; i <= 9; i++)
 	{
 		for(j = 0; j < 9; j++)
-			if (i * j / 10 == 0)
+			if (i * (j + 1) / 10 == 0)
 				printf("%i,  ", i * j);
 			else
 				printf("%i, ", i * j);
