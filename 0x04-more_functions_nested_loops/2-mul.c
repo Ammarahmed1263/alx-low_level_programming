@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * add - adds two numbers
+ * mul - mult two numbers
  * @a: first input
  * @b: second input
- * Return: sum
+ * Return: product
  */
 
-int add(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
