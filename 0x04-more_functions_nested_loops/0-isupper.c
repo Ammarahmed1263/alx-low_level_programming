@@ -6,7 +6,7 @@
  * Return: 1 if upper else 0
  */
 
-int _islower(int c)
+int _isupper(int c)
 {
 	int i, counter = 0;
 
