@@ -14,14 +14,14 @@ void print_square(int size)
 		{
 			for (k = 0; k < size; k++)
 			{
-				printf("#");
+				putchar("#");
 			}
 
-			printf("\n");
+			_putchar("\n");
 		}
 	}
 	else
 	{
-		printf("\n");
+		_putchar("\n");
 	}	
 }
