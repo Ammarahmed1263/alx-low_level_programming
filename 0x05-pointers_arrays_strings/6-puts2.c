@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * _puts - prints string
+ * puts2 - print string one after another
  * @str: pointer to string
  *
  */
 
-void _puts(char *str)
+void puts2(char *str)
 {
 	char *i;
 
-	for (i = str; *i != '\0'; i++)
+	for (i = str; *i != '\0'; i += 2)
 		_putchar(*i);
 
 	_putchar('\n');
