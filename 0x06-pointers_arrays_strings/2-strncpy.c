@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _stnrcpy - copy src into des for n bytes
+ * _strncpy - copy src into des for n bytes
  * @dest: where to copy
  * @src: from where to copy
  * @n: number of bytes
