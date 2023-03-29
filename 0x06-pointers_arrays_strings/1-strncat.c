@@ -4,7 +4,7 @@
  * @dest: string to add to
  * @src: string to add
  * @n: number of bytes
- * 
+ *
  * Return: result string
  */
 
