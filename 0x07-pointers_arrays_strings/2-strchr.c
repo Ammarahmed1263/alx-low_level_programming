@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - searches for char
  * @s: string to search in
@@ -10,12 +11,19 @@
 
 char *_strchr(char *s, char c)
 {
+	int found;
 
 	while (*s != '\0')
 	{
 		if (*s == c)
+		{
+			found = 1;
 			break;
+		}
 		s++;
 	}
-	return (s);
+	if (found == 1)
+		return (s);
+	else
+		return (NULL);
 }
