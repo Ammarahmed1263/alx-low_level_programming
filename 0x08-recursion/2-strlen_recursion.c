@@ -6,7 +6,7 @@
  * Return: 0 if end of string 1 + smaller
  * problem other wise
  */
-int _strlen_recursion(char* s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
