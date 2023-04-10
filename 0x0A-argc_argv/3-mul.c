@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints sum of arguments
+ * main - prints product of arguments
  * @argc: arguments count
  * @argv: arguments vector
  *
