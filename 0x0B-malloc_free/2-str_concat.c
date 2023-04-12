@@ -18,24 +18,21 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j;
 	char *pt;
 
-	pt = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
-	
-	if (pt == NULL)
-		return (NULL);
-	
 	if (s1 == NULL)
 		return (s2);
 	else if (s2 == NULL)
 		return (s1);
-	else
-	{
-
-		for (i = 0; i < strlen(s1); i++)
-			*(pt + i) = *(s1 + i);
-		
-		for (j = 0; j < strlen(s2) + 1; j++)
-			*(pt + i + j) = *(s2 + j);
 	
-		return (pt);
-	}
+	pt = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+
+	if (pt == NULL)
+		return (NULL);
+
+	for (i = 0; i < strlen(s1); i++)
+		*(pt + i) = *(s1 + i);
+
+	for (j = 0; j < strlen(s2) + 1; j++)
+		*(pt + i + j) = *(s2 + j);
+
+	return (pt);
 }
