@@ -17,14 +17,16 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i, j;
 	char *pt;
+	char emt[1];
 
+	emt = "";
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		return (emt);
 	else if (s1 == NULL)
-		return (s2);
+		return (emt);
 	else if (s2 == NULL)
 		return (s1);
-	
+
 	pt = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
 
 	if (pt == NULL)
