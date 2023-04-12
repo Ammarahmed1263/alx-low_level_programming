@@ -6,6 +6,10 @@
  * create_array - creates intialized array
  * @size: number of elements in the array
  * @c: char to intialize array with
+ *
+ * Return: null of size is zero or 
+ * can't create pointer alse return
+ * pointer to created array
  */
 
 char *create_array(unsigned int size, char c)
