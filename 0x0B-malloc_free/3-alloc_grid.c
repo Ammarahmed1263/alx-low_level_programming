@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stddef.h>
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 /**
  * alloc_grid - creates grid
@@ -14,7 +11,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
+	int i, j, k;
 	int **ptt;
 
 	if (width <= 0 || height <= 0)
@@ -31,8 +28,8 @@ int **alloc_grid(int width, int height)
 
 		if (ptt[i] == NULL)
 		{
-			for (j = 0; j < i ; j++)
-				free(ptt[i]);
+			for (k = 0; k < i ; k++)
+				free(ptt[k]);
 			free(ptt);
 			return (NULL);
 		}
