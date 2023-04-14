@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		}
 		i++;
 	}
-		
+
 	printf("%i\n", count);
 	return (0);
 }
