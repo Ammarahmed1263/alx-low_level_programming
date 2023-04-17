@@ -17,7 +17,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	cr_dg = malloc(sizeof(dog_t));
 	temp_name = malloc(sizeof(char) * (strlen(name) + 1));
-	temp_owneri = malloc(sizeof(char) * (strlen(owner) + 1));
+	temp_owner = malloc(sizeof(char) * (strlen(owner) + 1));
 
 	if (temp_name && cr_dg && temp_owner)
 	{
