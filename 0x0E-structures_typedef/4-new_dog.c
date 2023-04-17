@@ -2,10 +2,12 @@
 #include <stdlib.h>
 /**
  * new_dog - creates dog
- * @d: struct of type dog
  * @name: dog name
  * @age: dog age
  * @owner: dog owner
+ *
+ * Return: null on fail, pointer to
+ * dog struct on success
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
