@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  * print_dog - prints dog's data
  * @d: pointer to dog struct
+ *
+ * Description: this function
+ * prints dog's name, age and owner
  */
 void print_dog(struct dog *d)
 {
