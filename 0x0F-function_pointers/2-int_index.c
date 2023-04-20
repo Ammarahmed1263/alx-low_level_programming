@@ -3,7 +3,10 @@
  * int_index - searches for integer
  * @array: array to be iterated
  * @size: size of array
- * @cmo: compare function to apply
+ * @cmp: compare function to apply
+ *
+ * Return: index of element in success
+ * negative one in failure
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
