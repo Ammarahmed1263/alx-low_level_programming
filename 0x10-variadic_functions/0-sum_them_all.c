@@ -2,7 +2,8 @@
 #include "variadic_functions.h"
 /**
  * sum_them_all - sum all function arguments
- * @n: first argument
+ * @n: number of arguments
+ * @...: variable number of numbers to be added
  *
  * Return: the sum of all elements
  */
