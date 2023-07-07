@@ -8,6 +8,9 @@
  * Description: this functions returns
  * bit value at given index from the given
  * integer
+ *
+ * Return: the value of bit in given index or
+ * -1 if error occurs
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
