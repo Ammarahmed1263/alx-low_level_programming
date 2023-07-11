@@ -8,7 +8,7 @@
  * Description: this function handle error
  * according to given files names
  */
-void err_hndl(int f_from, int f_to, char **argv)
+void err_hndl(int f_from, int f_to, int wrt, char **argv)
 {
 	if (f_from < 0)
 	{
@@ -16,7 +16,7 @@ void err_hndl(int f_from, int f_to, char **argv)
 		exit(98);
 	}
 
-	if (f_to < 0)
+	if (f_to < 0 || wrt < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 		exit(99);
@@ -46,19 +46,14 @@ int main(int argc, char **argv)
 	f_from = open(argv[1], O_RDONLY);
 	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC,  0664);
 
-	err_hndl(f_from, f_to, argv);
+	err_hndl(f_from, f_to, 0, argv);
 
 	while ((rd = read(f_from, buf, 1024)) > 0)
 	{
 		wrt = write(f_to, buf, rd);
-		if (wrt != rd)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
-		err_hndl(0, wrt, argv);
+		err_hndl(0, f_to, wrt, argv);
 	}
-	err_hndl(rd, 0, argv);
+	err_hndl(rd, 0, 0, argv);
 
 	if (close(f_from) == -1)
 	{
