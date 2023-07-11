@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	f_from = open(argv[1], O_RDONLY);
+	f_from = open(argv[1], O_RDONLY | O_EXCL);
 	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC,  0664);
 
 	err_hndl(f_from, f_to, 0, argv);
