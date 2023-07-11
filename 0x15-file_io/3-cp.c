@@ -51,10 +51,15 @@ int main(int argc, char **argv)
 	while ((rd = read(f_from, buf, 1024)) > 0)
 	{
 		wrt = write(f_to, buf, rd);
+		if (wrt != rd)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 		err_hndl(0, wrt, argv);
 	}
 	err_hndl(rd, 0, argv);
-	
+
 	if (close(f_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Can't close fd %i\n", f_from);
@@ -68,3 +73,4 @@ int main(int argc, char **argv)
 	}
 	return (0);
 }
+
