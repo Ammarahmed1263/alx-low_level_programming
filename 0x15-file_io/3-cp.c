@@ -19,7 +19,7 @@ void err_hndl(int f_from, int f_to, int wrt, char **argv)
 
 	if (f_to < 0 || wrt < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 }
@@ -59,13 +59,13 @@ int main(int argc, char **argv)
 
 	if (close(f_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %i\n", f_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", f_from);
 		exit(100);
 	}
 
 	if (close(f_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %i\n", f_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", f_to);
 		exit(100);
 	}
 	return (0);
