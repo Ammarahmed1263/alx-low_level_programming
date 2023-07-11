@@ -3,6 +3,7 @@
  * err_hndl - handles errors
  * @f_from: file copied from
  * @f_to: file copied to
+ * @wrt: return of write function
  * @argv: program input arguments
  *
  * Description: this function handle error
@@ -27,7 +28,8 @@ void err_hndl(int f_from, int f_to, int wrt, char **argv)
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Description:
+ * Description: this function copies
+ * file content to another file
  *
  * Return: 0 on success, exit with different
  * values on fail
