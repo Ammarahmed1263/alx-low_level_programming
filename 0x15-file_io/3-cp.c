@@ -19,7 +19,7 @@ void err_hndl(int f_from, int f_to, int wrt, char **argv)
 
 	if (f_to < 0 || wrt < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 }
