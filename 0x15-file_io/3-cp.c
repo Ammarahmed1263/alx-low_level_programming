@@ -35,7 +35,7 @@ void err_hndl(int f_from, int f_to, char **argv)
 int main(int argc, char **argv)
 {
 	int f_from, f_to, rd, wrt;
-	char *buf[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 
 	while ((rd = read(f_from, buf, 1024)) > 0)
 	{
-		wrt = write(f_to, buf, 1024);
+		wrt = write(f_to, buf, rd);
 		err_hndl(0, wrt, argv);
 	}
 	err_hndl(rd, 0, argv);
